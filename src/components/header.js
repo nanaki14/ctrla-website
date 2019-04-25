@@ -1,13 +1,14 @@
 import { Link } from "gatsby"
 import * as PropTypes from "prop-types"
 import React from "react"
+import logoSVG from '../images/ctrla_logo.svg'
 
 const Header = ({ siteTitle }) => (
   <header>
     <div className="wrap">
       <h1>
         <Link to="/">
-          <img src="/img/ctrla_logo.svg" alt="{siteTitle}" width="183" height="54" />
+          <img src={logoSVG} alt={siteTitle} width="140" height="50" />
         </Link>
       </h1>
         <div className="nav">

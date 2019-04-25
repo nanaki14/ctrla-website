@@ -4,6 +4,8 @@ logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+secret-google-drive.json
+secret-spreadsheet.json
 
 # Runtime data
 pids
