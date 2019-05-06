@@ -1,14 +1,13 @@
 import React from "react"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import LayoutContainer from "../components/utils/LayoutContainer"
+import Seo from "../components/utils/Seo"
 
 const IndexPage = () => (
-  <Layout>
-    <SEO title="Top" keywords={[`Ctrl+A`, `ctrla`, `club event`, `akihabara`, `dj`, `vj`]} />
-  </Layout>
+  <LayoutContainer>
+    <Seo title="Top" keywords={[`Ctrl+A`, `ctrla`, `club event`, `akihabara`, `dj`, `vj`]} />
+  </LayoutContainer>
 )
 
 export default IndexPage

@@ -10,7 +10,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/assets/images`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -24,7 +24,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#ffff00`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/assets/images/webclip.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
@@ -42,7 +42,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-google-sheets',
       options: {
-        spreadsheetId: require('./secret-spreadsheet.json'),
+        // spreadsheetId: require('./secret-spreadsheet.json'),
         worksheetTitle: 'Artist',
         credentials: require('./secret-google-drive.json')
       }
@@ -50,7 +50,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-google-sheets',
       options: {
-        spreadsheetId: require('./secret-spreadsheet.json'),
+        // spreadsheetId: require('./secret-spreadsheet.json'),
         worksheetTitle: 'Event',
         credentials: require('./secret-google-drive.json')
       }
