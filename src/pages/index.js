@@ -1,8 +1,8 @@
-import React from "react"
-// import { Link } from "gatsby"
+import React from 'react'
+// import { Link } from 'gatsby'
 
-import LayoutContainer from "../components/utils/LayoutContainer"
-import Seo from "../components/utils/Seo"
+import LayoutContainer from '../components/utils/LayoutContainer'
+import Seo from '../components/utils/Seo'
 
 const IndexPage = () => (
   <LayoutContainer>

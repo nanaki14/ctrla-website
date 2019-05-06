@@ -1,12 +1,8 @@
-/**
- * Layout component that queries for data
- * with Gatsby's StaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/static-query/
- */
-
-import React from "react"
-import { StaticQuery, graphql } from "gatsby"
+import React from 'react'
+import { StaticQuery, graphql } from 'gatsby'
+import ThemeWrapper from '../styles'
+import { GloabContainer } from '../utils/Containers'
+import Header from '../organisms/Header'
 
 
 const LayoutContainer = ({ children }) => (
@@ -21,11 +17,14 @@ const LayoutContainer = ({ children }) => (
       }
     `}
     render={data => (
-      <>
-        <div className="content">
-          <main>{children}</main>
-        </div>
-      </>
+      <ThemeWrapper>
+        <GloabContainer>
+          <Header />
+          <div>
+            {children}
+          </div>
+        </GloabContainer>
+      </ThemeWrapper>
     )}
   />
 )

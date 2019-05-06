@@ -1,6 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="79.744" height="55" viewBox="0 0 79.744 55">
-  <g id="logo" transform="translate(-5992.761 8020.205)">
-    <path id="パス_1" data-name="パス 1" d="M6089.544-7965.205h6.524l-23.214-55h-5.773l-23.214,55h6.525l5.639-14.123H6083.9Zm-31.465-19.25,11.889-29.771,11.888,29.771Z" transform="translate(-23.562 0)"/>
-    <path id="パス_2" data-name="パス 2" d="M6010.142-8020.205h-5.773l-11.607,27.5h5.9l8.593-21.521,8.595,21.521h5.9Z" transform="translate(0 0)"/>
-  </g>
-</svg>
+<svg height="55" viewBox="0 0 79.744 55" width="79.744" xmlns="http://www.w3.org/2000/svg"><g transform="translate(-5992.761 8020.205)"><path d="m6089.544-7965.205h6.524l-23.214-55h-5.773l-23.214 55h6.525l5.639-14.123h27.869zm-31.465-19.25 11.889-29.771 11.888 29.771z" transform="translate(-23.562)"/><path d="m6010.142-8020.205h-5.773l-11.607 27.5h5.9l8.593-21.521 8.595 21.521h5.9z"/></g></svg>

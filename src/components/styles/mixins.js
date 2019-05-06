@@ -11,8 +11,28 @@ const mixins = {
     white-space: nowrap;
     text-overflow: ellipsis;
   `,
-  font_propmpt: css`
+  font_prompt: css`
     font-family: 'Prompt', sans-serif;
+  `,
+  font_h1: css`
+    font-size: 2.8rem;
+    line-height: ${38 / 28};
+  `,
+  font_h2: css`
+    font-size: 2rem;
+    line-height: ${30 / 20};
+  `,
+  font_h3: css`
+    font-size: 1.6rem;
+    line-height: ${32 / 16};
+  `,
+  font_text: css`
+    font-size: 1.4rem;
+    line-height: ${28 / 14};
+  `,
+  font_subtext: css`
+    font-size: 1.2rem;
+    line-height: ${24 / 12};
   `
 }
 
