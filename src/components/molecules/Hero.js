@@ -14,7 +14,7 @@ const Hero = () => {
 }
 
 const Wrapper = styled.div`
-padding: 40px ${props => props.theme.sizes.pc.side_padding}px;
+  padding: 40px ${props => props.theme.sizes.pc.side_padding}px;
   background-color: ${props => props.theme.colors.white};
 `
 
