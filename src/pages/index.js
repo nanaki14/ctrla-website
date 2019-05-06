@@ -6,8 +6,10 @@ import { ContentsCcntainer, ContentsInner, SectionContainer, GridCcntainer, Grid
 import Seo from '../components/utils/Seo'
 import SectionTitle from '../components/atoms/SectionTitle'
 import PrimaryText from '../components/atoms/PrimaryText'
+import MoreLink from '../components/atoms/MoreLink'
 import Hero from '../components/molecules/Hero'
 import MemberItem from '../components/molecules/MemberItem'
+import Infomation from '../components/molecules/Infomation'
 
 import umhr from '../assets/images/member/umhr.png'
 import cyan from '../assets/images/member/cyan.png'
@@ -85,6 +87,14 @@ const members = [
   }
 ]
 
+const infomation = {
+  vol: '24 4th Anniversary',
+  date: '2019.5.31. (Fri) 19:00 - 23:00',
+  place: 'Akihabara Mogra',
+  map: '',
+  door: '¥2,500 (+1Drink)'
+}
+
 const IndexPage = () => (
   <LayoutContainer>
     <Seo title="Top" keywords={[`Ctrl+A`, `ctrla`, `club event`, `akihabara`, `dj`, `vj`]} />
@@ -97,7 +107,10 @@ const IndexPage = () => (
             <GridItem column={1}>
               <SectionTitle>Next Event</SectionTitle>
             </GridItem>
-            <GridItem column={2}></GridItem>
+            <GridItem column={2}>
+              <Infomation infomation={infomation} />
+              <MoreLink link="">More Details</MoreLink>
+            </GridItem>
           </GridCcntainer>
         </SectionContainer>
 
