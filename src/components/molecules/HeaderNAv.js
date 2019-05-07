@@ -6,10 +6,18 @@ const HeaderNav = () => {
   return (
     <nav>
       <List>
-        <ListItem><Link to="/about">^ About</Link></ListItem>
-        <ListItem><Link to="/member">^ Member</Link></ListItem>
-        <ListItem><Link to="/events">^ Events</Link></ListItem>
-        <ListItem><a href="mailto:">^ Contact</a></ListItem>
+        <ListItem>
+          <Link to="/#about">^ About</Link>
+        </ListItem>
+        <ListItem>
+          <Link to="/#member">^ Member</Link>
+        </ListItem>
+        <ListItem>
+          <Link to="/events">^ Events</Link>
+        </ListItem>
+        <ListItem>
+          <a href="mailto:">^ Contact</a>
+        </ListItem>
       </List>
     </nav>
   )
