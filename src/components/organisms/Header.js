@@ -2,16 +2,16 @@ import React from 'react'
 import styled from 'styled-components'
 
 import SimpleLogo from '../atoms/SimpleLogo'
-import HeaderNAv from '../molecules/HeaderNAv'
+import HeaderNav from '../molecules/HeaderNav'
 
 const Header = () => {
-  return(
+  return (
     <Wrapper>
       <LogoWrapper>
         <SimpleLogo />
       </LogoWrapper>
       <Inner>
-        <HeaderNAv />
+        <HeaderNav />
       </Inner>
     </Wrapper>
   )

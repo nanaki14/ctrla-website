@@ -3,7 +3,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import ThemeWrapper from '../styles'
 import { GloabContainer } from '../utils/Containers'
 import Header from '../organisms/Header'
-
+import Footer from '../organisms/Footer'
 
 const LayoutContainer = ({ children }) => {
   return (
@@ -17,16 +17,17 @@ const LayoutContainer = ({ children }) => {
           }
         }
       `}
-      render={( /*data*/ ) => (
-        <ThemeWrapper>
-          <GloabContainer>
-            <Header />
-            <div>
-              {children}
-            </div>
-          </GloabContainer>
-        </ThemeWrapper>
-      )}
+      render={
+        (/*data*/) => (
+          <ThemeWrapper>
+            <GloabContainer>
+              <Header />
+              <div>{children}</div>
+              <Footer />
+            </GloabContainer>
+          </ThemeWrapper>
+        )
+      }
     />
   )
 }
