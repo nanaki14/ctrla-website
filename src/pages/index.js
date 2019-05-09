@@ -122,7 +122,7 @@ const IndexPage = () => (
             </GridItem>
             <GridItem column={2}>
               <Infomation infomation={infomation} />
-              <MoreLink link="">More Details</MoreLink>
+              <MoreLink link="/events/vol24">More Details</MoreLink>
             </GridItem>
           </GridCcntainer>
         </SectionContainer>

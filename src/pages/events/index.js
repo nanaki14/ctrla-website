@@ -1,19 +1,19 @@
 import React from 'react'
 // import { Link } from 'gatsby'
 
-import LayoutContainer from '../components/utils/LayoutContainer'
+import LayoutContainer from '../../components/utils/LayoutContainer'
 import {
   ContentsCcntainer,
   ContentsInner,
   SectionContainer,
   GridCcntainer,
   GridItem,
-} from '../components/utils/Containers'
-import Seo from '../components/utils/Seo'
-import SectionTitle from '../components/atoms/SectionTitle'
-import EventCard from '../components/organisms/EventCard'
+} from '../../components/utils/Containers'
+import Seo from '../../components/utils/Seo'
+import SectionTitle from '../../components/atoms/SectionTitle'
+import EventCard from '../../components/organisms/EventCard'
 
-import flyer from '../assets/images/flyer/vol22.png'
+import flyer from '../../assets/images/flyer/vol22.png'
 
 const infomation = {
   vol: '24 4th Anniversary',
@@ -24,7 +24,7 @@ const infomation = {
 }
 
 const more = {
-  link: '',
+  link: '/events/vol24',
 }
 
 const events = [
