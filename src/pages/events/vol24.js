@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import { mq } from '../../components/styles/'
 import LayoutContainer from '../../components/utils/LayoutContainer'
 import {
   ContentsCcntainer,
@@ -11,7 +12,6 @@ import {
 } from '../../components/utils/Containers'
 import Seo from '../../components/utils/Seo'
 import { Spercer } from '../../components/utils/Spercer'
-import SectionTitle from '../../components/atoms/SectionTitle'
 import PrimaryText from '../../components/atoms/PrimaryText'
 import Hero from '../../components/molecules/Hero'
 import Infomation from '../../components/molecules/Infomation'
@@ -126,21 +126,26 @@ const IndexPage = () => (
       title="Top"
       keywords={[`Ctrl+A`, `ctrla`, `club event`, `akihabara`, `dj`, `vj`]}
     />
+    <SpTitle>
+      Vol.24
+      <br />
+      Information
+    </SpTitle>
     <Hero />
     <ContentsCcntainer>
       <ContentsInner>
         <SectionContainer>
           <GridCcntainer>
             <GridItem column={1}>
-              <SectionTitle>
+              <PcTitle>
                 Vol.24
                 <br />
                 Information
-              </SectionTitle>
+              </PcTitle>
             </GridItem>
             <GridItem column={2}>
               <Infomation infomation={infomation} />
-              <Spercer height={64} />
+              <Spercer pcHeight={64} spHeight={40} />
               <PrimaryText>
                 こんにちには、Ctrl+Aです。3年目最後のCtrl+Aは、沖縄にゆかりのあるポップスに強いDJさん御三方を招集しました。県外に出て活躍されてる方、沖縄に根付いてカルチャーを支えてきた方、沖縄の新しいシーンを盛り上げている方、各々の気持ちがあふれる素敵なイベントにできたらと思います！ぜひ遊びに来て下さいね◎
                 <br />
@@ -237,7 +242,7 @@ const IndexPage = () => (
                     </a>
                   </PrimaryText>
                 </SectionHead>
-                <iframe
+                <MapFrame
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.9816577793654!2d139.7728913152594!3d35.702068980189445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ea71928307d%3A0xe49b9244dc37e180!2z56eL6JGJ5Y6fIE1PR1JB!5e0!3m2!1sja!2sjp!4v1557402048633!5m2!1sja!2sjp"
                   width="682"
                   height="389"
@@ -251,7 +256,6 @@ const IndexPage = () => (
             </GridItem>
           </GridCcntainer>
         </SectionContainer>
-        >
       </ContentsInner>
     </ContentsCcntainer>
   </LayoutContainer>
@@ -265,6 +269,9 @@ const LineButton = styled.a`
 const QrImage = styled.span`
   display: block;
   width: 335px;
+  ${mq.small`
+    width: 100%;
+  `}
 `
 
 const SectionHead = styled.div`
@@ -276,6 +283,36 @@ const SectionHeading = styled.h3`
   img {
     margin-top: 0.5em;
   }
+`
+
+const MapFrame = styled.iframe`
+  ${mq.small`
+    width: 100% !important;
+    height: 191px !important;
+  `}
+`
+
+const PcTitle = styled.h1`
+  margin-bottom: 66px;
+  font-weight: 300;
+  ${props => props.theme.mixins.font_prompt}
+  ${props => props.theme.mixins.font_h1}
+  ${mq.small`
+    display: none
+  `}
+`
+
+const SpTitle = styled.h1`
+  margin-bottom: -5px;
+  padding: 30px ${props => props.theme.sizes.sp.side_padding}% 0;
+  background-color: ${props => props.theme.colors.background};
+  font-weight: 300;
+  ${props => props.theme.mixins.font_prompt}
+  ${props => props.theme.mixins.font_h1}
+  display: none
+  ${mq.small`
+    display: block
+  `}
 `
 
 export default IndexPage

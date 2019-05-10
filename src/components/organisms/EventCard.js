@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import { mq } from '../styles/'
 import MoreLink from '../atoms/MoreLink'
 import Infomation from '../molecules/Infomation'
 
@@ -18,12 +19,17 @@ const EventCard = ({ flyer = placeholder, infomation, more }) => {
   )
 }
 
-const Wrapper = styled.article``
+const Wrapper = styled.article`
+  ${mq.small`
+    margin-bottom: 60px;
+  `}
+`
 
 const Flyer = styled.figure`
   display: block;
   margin-bottom: 40px;
   img {
+    width: 100%;
     pointer-events: none;
   }
 `

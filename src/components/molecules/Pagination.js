@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
+import { mq } from '../styles/'
 
 const Pagination = ({ nextlink, prevlink }) => {
   return (
@@ -19,6 +20,9 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   margin-top: 107px;
+  ${mq.small`
+    margin-top: 67px;
+  `}
 `
 
 const StyledLink = styled(Link)`

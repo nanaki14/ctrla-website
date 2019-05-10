@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { nl2br } from '../utils/'
+import { mq } from '../styles/'
 import PrimaryText from '../atoms/PrimaryText'
 
 const MemberBlock = ({ member }) => {
@@ -53,6 +54,10 @@ const Social = styled.ul`
     &:hover {
       color: ${props => props.theme.colors.hover};
       text-decoration: none;
+      ${mq.small`
+        color: ${props => props.theme.colors.primary};
+        text-decoration: underline;
+      `}
     }
   }
 `
