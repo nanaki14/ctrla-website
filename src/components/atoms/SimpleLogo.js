@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
-import { Location } from '@reach/router';
+import { Location } from '@reach/router'
+import { mq } from '../styles/'
 import logoImg from '../../assets/images/logo.svg'
 
 const renderLogo = () => {
@@ -16,9 +17,13 @@ const SimpleLogo = () => {
   return (
     <Wrapper>
       <Location>
-        {({ location }) => (
-          location.pathname === '/' ? (<h1>{renderLogo()}</h1>) : (<h2>{renderLogo()}</h2>)
-        )}
+        {({ location }) =>
+          location.pathname === '/' ? (
+            <h1>{renderLogo()}</h1>
+          ) : (
+            <h2>{renderLogo()}</h2>
+          )
+        }
       </Location>
     </Wrapper>
   )
@@ -29,8 +34,13 @@ const Wrapper = styled.div`
   a {
     display: block;
     transition: 0.3s ${props => props.theme.easings.ease_out_cubic};
+    ${mq.small`
+      width: 84px;
+    `}
     &:hover {
-      opacity: 0.7
+      opacity: 0.7 ${mq.small`
+        opacity: 1;
+      `};
     }
   }
 `

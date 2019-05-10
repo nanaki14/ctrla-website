@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
+import { mq } from '../styles/'
 import logoImg from '../../assets/images/ctrla_logo.svg'
 
 const Footer = () => {
@@ -58,6 +59,10 @@ const Inner = styled.div`
   margin: 0 auto;
   padding: 70px ${props => props.theme.sizes.pc.side_padding}px 167px;
   overflow: hidden;
+  ${mq.small`
+    display: block;
+    padding: 70px ${props => props.theme.sizes.sp.side_padding}% 22px;
+  `}
 `
 
 const Logo = styled.figure`
@@ -65,6 +70,11 @@ const Logo = styled.figure`
   right: ${props => props.theme.sizes.pc.side_padding}px;
   bottom: -6px;
   width: 680px;
+  ${mq.small`
+    width: 97px;
+    right: 20px;
+    bottom: 20px;
+  `}
 `
 
 const CopyLight = styled.small`
@@ -76,6 +86,9 @@ const CopyLight = styled.small`
 `
 
 const PageList = styled.ul`
+  ${mq.small`
+      margin-bottom: 50px;
+    `}
   li {
     &:not(:last-child) {
       margin-bottom: 35px;
@@ -90,12 +103,18 @@ const PageList = styled.ul`
     ${props => props.theme.mixins.font_h1}
     &:hover {
       color: ${props => props.theme.colors.hover};
+      ${mq.small`
+        color: ${props => props.theme.colors.primary};
+      `}
     }
   }
 `
 
 const SocialList = styled.ul`
   margin-left: ${props => (236 / props.theme.sizes.pc.inner_width) * 100}%;
+  ${mq.small`
+    margin: 0 0 47px;
+  `}
   li {
     &:not(:last-child) {
       margin-bottom: 14px;

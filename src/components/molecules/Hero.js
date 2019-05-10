@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import { mq } from '../styles/'
 import hero from '../../assets/images/hero.png'
 
 const Hero = () => {
@@ -16,6 +17,10 @@ const Hero = () => {
 const Wrapper = styled.div`
   padding: 40px ${props => props.theme.sizes.pc.side_padding}px;
   background-color: ${props => props.theme.colors.white};
+  ${mq.small`
+    padding: 32px ${props => props.theme.sizes.sp.side_padding}% 0;
+    background-color: ${props => props.theme.colors.background};
+  `}
 `
 
 const Figure = styled.figure`

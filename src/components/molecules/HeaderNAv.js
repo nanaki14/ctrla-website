@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
+import { mq } from '../styles/'
 
 const HeaderNav = () => {
   return (
@@ -26,6 +27,9 @@ const HeaderNav = () => {
 const List = styled.ul`
   display: flex;
   align-items: center;
+  ${mq.small`
+    display: none;
+  `}
 `
 
 const ListItem = styled.li`
