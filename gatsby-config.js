@@ -27,6 +27,12 @@ module.exports = {
         icon: `src/assets/images/webclip.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        displayName: true,
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
@@ -35,30 +41,30 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['M PLUS 1p']
-        }
-      }
+          families: ['M PLUS 1p'],
+        },
+      },
     },
     {
       resolve: 'gatsby-source-google-sheets',
       options: {
         // spreadsheetId: require('./secret-spreadsheet.json'),
         worksheetTitle: 'Artist',
-        credentials: require('./secret-google-drive.json')
-      }
+        credentials: require('./secret-google-drive.json'),
+      },
     },
     {
       resolve: 'gatsby-source-google-sheets',
       options: {
         // spreadsheetId: require('./secret-spreadsheet.json'),
         worksheetTitle: 'Event',
-        credentials: require('./secret-google-drive.json')
-      }
+        credentials: require('./secret-google-drive.json'),
+      },
     },
     {
       resolve: `gatsby-plugin-s3`,
       options: {
-        bucketName: 'ctrla.tokyo'
+        bucketName: 'ctrla.tokyo',
       },
     },
   ],
