@@ -4,6 +4,9 @@ import { mq } from '../styles/'
 export const GloabContainer = styled.div`
   display: flex;
   flex-direction: column;
+  ${mq.small`
+    padding: 63px 0 0;
+  `}
   > * {
     width: 100%;
   }
